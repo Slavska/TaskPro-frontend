@@ -1,9 +1,16 @@
-import axios from "axios";
+// import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+// import { useSelector } from "react-redux";
+import { instance } from "../auth/operations";
+// import { selectToken } from "../auth/authSelectors";
 
-const instance = axios.create({
-  baseURL: "https://taskpro-backend-c73a.onrender.com/",
-});
+// const token = useSelector(() => state.auth.token);
+
+// const instance = axios.create({
+//   baseURL: "https://taskpro-backend-c73a.onrender.com/",
+// });
+
+// instance.defaults.headers.common.Authorization = `Bearer ${token}`;
 
 export const fetchAllDashboardsThunk = createAsyncThunk(
   "dashboards/fetchAll",
