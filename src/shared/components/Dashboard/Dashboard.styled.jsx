@@ -5,17 +5,19 @@ import { breakpoints } from "../styles/breakpoints";
 const { tablet, desktop } = breakpoints;
 
 export const DivFull = styled.div`
-padding: 14px 20px;
-background: url(${props => props.imgUrl}) no-repeat center center;
+padding: 14px 20px 0  20px;
+background: url(${props => props.imgurl}) no-repeat center center;
 background-size: cover;
+    height: 100vh;
 
 
  @media screen and (min-width: ${tablet}) {
-     padding: 94px 32px;
+     padding: 94px 32px 0  32px;
+       height: 100vh;
   }
 
   @media screen and (min-width: ${desktop}) {
-  padding: 84px 284px;
+  padding: 84px 19px 0  284px;
     width: 100%;
     height: 100vh;
   }
@@ -24,9 +26,11 @@ background-size: cover;
 
 
 export const DivText = styled.div`
-width:486px;
+max-width:486px;
+width: 100%;
 height:72px;
 margin: 281px auto 0;
+color: ${({ theme }) => theme.colors.textCard};
 `
 
 export const H1 = styled.h1`
@@ -36,6 +40,9 @@ font-size: 18px;
 font-weight: 500;
 letter-spacing: -0.36px;
  margin-bottom: 39px;
+ background: ${({ theme }) => theme.colors.backgroundAll};
+    border-radius: 8px 8px 8px 8px;
+    padding: 10px 15px;
 
 @media screen and (min-width: ${tablet}) {
   
@@ -60,6 +67,7 @@ align-items: center;
 border: none;
 
 width: 334px;
+
 height: 56px;
 
 font-family: Poppins;
@@ -80,16 +88,18 @@ fill: ${({ theme }) => theme.colors.colorPlusColumn};`
 export const DivColumns = styled.div`
 display:flex;
 gap: 26px;
-width: 347px;
-
+max-width: 347px;
+width: 100%;
+margin: 0 auto;
     overflow-x: auto;
 
      @media screen and (min-width: ${tablet}) {
-  width: 702px;
+  max-width: 702px;
+  width: 100%;
   }
 
   @media screen and (min-width: ${desktop}) {
-  max-width: 1550px;
+  max-width: 1617px;
     width: 100vw;
   }
             
@@ -118,6 +128,8 @@ export const FilterDiv = styled.div`
   display: flex;
     justify-content: space-between;
     position: relative;
+    width: 100%;
+    
 `
 
 export const FilterBtn = styled.button`
@@ -130,6 +142,9 @@ export const FilterBtn = styled.button`
     letter-spacing: -0.28px;
     gap: 8px;
     align-items: center;
+    background: ${({ theme }) => theme.colors.backgroundAll};
+    border-radius: 8px 8px 8px 8px;
+    padding: 21px;
 `
 
 export const FilterSvg = styled.svg`
@@ -297,7 +312,7 @@ gap: 15px;
 
  @media screen and (min-width: ${tablet}) {
   
-  gap: 26px;  
+  gap: 18px;  
   }
 
   @media screen and (min-width: ${desktop}) {

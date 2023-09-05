@@ -13,13 +13,15 @@ padding-right: 4px;
 
 
  @media screen and (min-width: ${tablet}) {
- height: 640px;
-padding-right: 8px;
+  height: 100%;
+    padding-right: 8px;
+    max-height: 650px;
   }
 
   @media screen and (min-width: ${desktop}) {
-  height: 640px;
-  padding-right: 8px;
+    height: 100%;
+    padding-right: 8px;
+    max-height: 650px;
     }
         
 &::-webkit-scrollbar {
@@ -49,7 +51,8 @@ padding-right: 8px;
 
 
 export const LiCard = styled.li`
-width: 334px;
+max-width: 334px;
+width: 100%;
 height: 154px;
 position: relative;
 background: ${({ theme }) => theme.colors.backgroundAll};
